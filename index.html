@@ -1,377 +1,156 @@
-<!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+Smart developers always View Source. 
+
+This application was built using Adobe Flex, an open source framework
+for building rich Internet applications that get delivered via the
+Flash Player or to desktops via Adobe AIR. 
+
+Learn more about Flex at http://flex.org 
+// -->
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>JiaoZiCat Studio</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet"> 
-    <link href="css/main.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="shortcut icon" href="images/favicon.ico">
-</head><!--/head-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--  BEGIN Browser History required section -->
+<link rel="stylesheet" type="text/css" href="http://www.adamatomic.com/canabalt/history/history.css" />
+<link rel="shortcut icon" href="favicon.ico">
+<!--  END Browser History required section -->
+
+<title>CANABALT</title>
+<script src="AC_OETags.js" language="javascript"></script>
+
+<!--  BEGIN Browser History required section -->
+<script src="http://www.adamatomic.com/canabalt/history/history.js" language="javascript"></script>
+<!--  END Browser History required section -->
+
+<style>
+body { margin: 0px; overflow:auto; background: #4d4d59; }
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 9;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 124;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
 
 <body>
+<center><br><br>
+<script language="JavaScript" type="text/javascript">
+<!--
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
 
-<!--.preloader-->
-<div class="preloader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
-<!--/.preloader-->
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
 
-<header id="header"> 
-    <div class="container">
-        <div class="container-inner">
-            <div class="logo pull-left">
-                <a class="pull-left logo" href="index.html">
-                    <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
-                </a>
-            </div>
-            <!--
-            <div class="menu pull-right">
-                <a href="#" class="nav-button">
-                    <i class="fa fa-align-justify"></i> Menu
-                </a> 
-            </div>
-            -->
-        </div>
-    </div>
-</header> <!--/#header-->
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
 
-<div id="navigation">
-    <div class="vertical-middle">
-        <div class="vertical-middle-inner">
-            <div class="main-nav">
-                <a id="hidemenu" href="#"><i class="fa fa-times-circle fa-2x"></i></a>
-                <ul>                     
-                    <li class="active"><a href="#" data-target="#page-slider" data-slide-to="0">Home</a></li>
-                    <li><a href="#" data-target="#page-slider" data-slide-to="1">About</a></li>
-                    <li><a href="#" data-target="#page-slider" data-slide-to="2">Service</a></li>                     
-                    <li><a href="#" data-target="#page-slider" data-slide-to="3">Portfolio</a></li>   
-                    <li><a href="#" data-target="#page-slider" data-slide-to="4">Blog</a></li> 
-                    <li><a href="#" data-target="#page-slider" data-slide-to="5">Contact</a></li>                  
-                </ul>
-            </div>
-        </div>
-    </div>
-</div><!--/#navigation-->
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "976",
+		"height", "336",
+		"align", "middle",
+		"id", "Canabalt",
+		"quality", "high",
+		"bgcolor", "#000000",
+		"name", "Canabalt",
+		"allowFullScreen","true",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "http://adamatomic.com/sw/f/Canabalt.swf",
+			"width", "976",
+			"height", "336",
+			"align", "middle",
+			"id", "Canabalt",
+			"quality", "high",
+			"bgcolor", "#000000",
+			"name", "Canabalt",
+			"allowFullScreen","true",
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Alternate HTML content should be placed here. '
+  	+ 'This content requires the Adobe Flash Player. '
+   	+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+    document.write(alternateContent);  // insert non-flash content
+  }
+// -->
+</script>
+<noscript>
+  	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+			id="Canabalt" width="976" height="336"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+			<param name="movie" value="http://adamatomic.com/sw/f/Canabalt.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#000000" />
+			<param name="allowFullScreen" value="true" />
+			<param name="allowScriptAccess" value="sameDomain" />
+			<embed src="http://adamatomic.com/sw/f/Canabalt.swf" quality="high" bgcolor="#000000"
+				width="976" height="336" name="Canabalt" align="middle"
+				play="true"
+				loop="false"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				allowFullScreen="true"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+			</embed>
+	</object>
+</noscript>
 
-<section id="welcome-page">
+<div style="position: absolute; top: 384; left: 50%; margin: 0; margin-left: 377px; width: 111px; height: 29px;"><a href="mega"><img src="HD.png" border=0></a></div>
 
-    <div id="page-slider" class="carousel slide" data-interval="false">
+<div style="position: absolute; top: 100%; left: 50%; margin: 0; margin-left: -488px; margin-top: -152px; background: url('gamebox/bg.gif'); width: 976px; height: 152px; text-align: left; font-family: verdana; font-size: 12px; color: #646a7d"">
+	<div style="background: transparent; margin: 8px; width: 45%;">
+		<img src="gamebox/us2.png" style="margin-bottom: 8px;"><br>
+		<a href="http://www.canabalt.com/" target="_blank"><img src="gamebox/icanabalt.png" border=0></a>
+	</div>
+	<div style="position: absolute; top: 0px; left: 50%; background: transparent; margin: 8px;">
+		<img src="gamebox/kong.png" style="margin-bottom: 8px;"><br>
+		<a href="http://www.kongregate.com/games/AdamAtomic/canabalt?utm_source=adamatomic.com&utm_medium=cpc&utm_campaign=canabalt" target="_blank"><img src="gamebox/kong_redlogo400x64.png" border=0></a>
 
-        <ol class="carousel-indicators visible-xs">
-            <li data-target="#page-slider" data-slide-to="0" class="active"></li>
-            <li data-target="#page-slider" data-slide-to="1"></li>
-            <li data-target="#page-slider" data-slide-to="2"></li>
-            <li data-target="#page-slider" data-slide-to="3"></li>
-            <li data-target="#page-slider" data-slide-to="4"></li>
-            <li data-target="#page-slider" data-slide-to="5"></li>
-        </ol>
+	</div>
+	<div style="background: transparent; margin: 8px;">
+		<b>Wait, I thought you didn’t like ads around your game?</b>  I don’t.  But I'm using something like 2.5TB of bandwidth each month serving this game up (i.e. A LOT) and Kong hosts good games by good people and is helping me pay my hosting bills!  So click, play, enjoy, and thanks for supporting indie games!
+	</div>
+	
+	<div style="border:none; margin-top: -300px; margin-left: 283px; width: 410px; height: 150px;"><a href="https://play.google.com/store/apps/details?id=fishnoodle.canabalt"><img src="android.png" border=0></a></div>
+</div>
 
-        <a class="welcome-page-left hidden-xs" href="#page-slider" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
-        <a class="welcome-page-right hidden-xs" href="#page-slider" data-slide="next"><i class="fa fa-chevron-right"></i></a>
-
-        <div class="carousel-inner">
-
-            <div id="home-page" class="item active">
-                <div class="container">
-                    <div class="vertical-middle">
-                        <div class="vertical-middle-inner">
-                            <div class="row">
-                                <div class="col-sm-6 col-md-push-6">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <!--
-                                        <iframe class="embed-responsive-item" src="//player.vimeo.com/video/43723521" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                                        -->
-                                        <img class="img-responsive" src="images/temp.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-pull-6">
-                                    <h2 class="heading">The Next <br> Generation Themes</h2>
-                                    <p class="lead">Whether you require large banners and posters to promote your company or <br>some more subtle letter heads and business cards, </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/#home-page-->
-
-            <!--
-            <div id="about-page" class="item">
-                <div class="container">
-
-                    <div class="vertical-middle">
-                        <div class="vertical-middle-inner">
-
-                            <div class="text-center">
-                                <h2 class="page-header">About Us</h2>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="box">
-                                        <h3>Our Company</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="box">
-                                        <h3>Our Mission</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="box">
-                                        <h3>Our Vision</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>              
-            </div><!--/#about-page-->
-
-            <!--
-            <div id="service-page" class="item">
-                <div class="container">
-
-                    <div class="vertical-middle">
-                        <div class="vertical-middle-inner">
-
-                            <div class="text-center">
-                                <h2 class="page-header">Our Services</h2>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-3 text-center">
-                                    <div class="box">
-                                        <i class="fa fa-apple fa-2x"></i>
-                                        <h3>iOS App</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <div class="box">
-                                        <i class="fa fa-android fa-2x"></i>
-                                        <h3>Android App</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <div class="box">
-                                        <i class="fa fa-windows fa-2x"></i>
-                                        <h3>Windows</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3 text-center">
-                                    <div class="box">
-                                        <i class="fa fa-linux fa-2x"></i>
-                                        <h3>Linux</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>                
-            </div><!--/#service-page-->
-
-            <!--
-            <div id="portfolio-page" class="item">
-                <div class="container">
-
-                    <div class="vertical-middle">
-                        <div class="vertical-middle-inner">
-
-                            <div class="text-center">
-                                <h2 class="page-header">Our Portfolio</h2>
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-sm-4">
-                                    <div class="overlay-container">
-                                        <img class="img-responsive" src="images/portfolio/1.jpg" alt="">
-                                        <div class="overlay">
-                                            <div class="vertical-middle">
-                                                <div class="vertical-middle-inner">
-                                                    <a href="#"><i class="fa fa-plus"></i></a>
-                                                    <h4>Marlon Henson INC</h4>
-                                                    Print Templates
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="overlay-container">
-                                        <img class="img-responsive" src="images/portfolio/2.jpg" alt="">
-                                        <div class="overlay">
-                                            <div class="vertical-middle">
-                                                <div class="vertical-middle-inner">
-                                                    <a href="#"><i class="fa fa-plus"></i></a>
-                                                    <h4>Marlon Henson INC</h4>
-                                                    Print Templates
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="overlay-container">
-                                        <img class="img-responsive" src="images/portfolio/3.jpg" alt="">
-                                        <div class="overlay">
-                                            <div class="vertical-middle">
-                                                <div class="vertical-middle-inner">
-                                                    <a href="#"><i class="fa fa-plus"></i></a>
-                                                    <h4>Marlon Henson INC</h4>
-                                                    Print Templates
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>                
-            </div><!--/#portfolio-page-->
-
-            <!--
-            <div id="blog-page" class="item">
-                <div class="container">
-
-                    <div class="vertical-middle">
-                        <div class="vertical-middle-inner">
-
-                            <div class="text-center">
-                                <h2 class="page-header">Our Blog</h2>
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-sm-4">
-                                    <div class="overlay-container">
-                                        <img class="img-responsive" src="images/blog/1.jpg" alt="">
-                                        <div class="overlay">
-                                            <div class="vertical-middle">
-                                                <div class="vertical-middle-inner">
-                                                    <a class="readmore" href="#"><i class="fa fa-link"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 class="entry-title"><a href="#">Peaceful Protests Derailed After Water Bottles Thrown, 47 Arrested Overnight</a></h3>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="overlay-container">
-                                        <img class="img-responsive" src="images/blog/2.jpg" alt="">
-                                        <div class="overlay">
-                                            <div class="vertical-middle">
-                                                <div class="vertical-middle-inner">
-                                                    <a class="readmore" href="#"><i class="fa fa-link"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 class="entry-title"><a href="#">20 Things Incoming College Freshmen Will Never Understand</a></h3>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="overlay-container">
-                                        <img class="img-responsive" src="images/blog/3.jpg" alt="">
-                                        <div class="overlay">
-                                            <div class="vertical-middle">
-                                                <div class="vertical-middle-inner">
-                                                    <a class="readmore" href="#"><i class="fa fa-link"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h3 class="entry-title"><a href="#">Motorcycle Accident Ends in the Craziest Possible Way</a></h3>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>                
-            </div><!--/#blog-page-->
-
-            <!--
-            <div id="contact-page" class="item">
-                <div class="container">
-
-                    <div class="vertical-middle">
-                        <div class="vertical-middle-inner">
-
-                            <div class="text-center">
-                                <h2 class="page-header">Contact Us</h2>
-                            </div>
-
-                            <form class="form-horizontal" id="contact-form" role="form">
-                                <div class="form-group form-status">
-                                    <div class="col-sm-offset-2 col-sm-6">
-                                        <div class="form-status-content">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-6">
-                                        <input type="text" name="name" class="form-control input-lg" placeholder="Name" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-6">
-                                        <input type="email" name="email" class="form-control input-lg" placeholder="Email" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-6">
-                                        <input type="text" name="subject" class="form-control input-lg" placeholder="Subject" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-8">
-                                        <textarea name="message" rows="6" class="form-control input-lg" placeholder="Message" required="required"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="col-sm-offset-2 col-sm-8">
-                                        <button type="submit" class="btn btn-lg btn-transparent">Sign in</button>
-                                    </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-
-                </div>                
-            </div><!--/#contact-page-->
-        </div><!--/.carousel-inner-->
-    </div>
-</section>
-
-<footer id="footer" class="text-center">
-    Designed by <a target="_blank" href="http://shapebootstrap.net/" title="Free Twitter Bootstrap WordPress Themes and HTML templates">ShapeBootstrap</a>
-</footer>
-
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>  
-<script type="text/javascript" src="js/main.js"></script>
-
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10818631-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
 </body>
 </html>
+
